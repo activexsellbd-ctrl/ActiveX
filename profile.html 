@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>My Profile | ActiveX</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<style>
+
+body{
+margin:0;
+font-family:Poppins,sans-serif;
+background:#f5f7fa;
+}
+
+.container{
+max-width:900px;
+margin:40px auto;
+background:white;
+padding:35px;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+
+.profile{
+text-align:center;
+margin-bottom:30px;
+}
+
+.profile img{
+width:140px;
+height:140px;
+border-radius:50%;
+border:5px solid #52D11F;
+object-fit:cover;
+}
+
+.profile h2{
+color:#062B6F;
+margin-top:15px;
+}
+
+.form-group{
+margin-bottom:20px;
+}
+
+label{
+display:block;
+font-weight:600;
+margin-bottom:8px;
+}
+
+input,textarea{
+width:100%;
+padding:14px;
+border:1px solid #ddd;
+border-radius:8px;
+font-size:15px;
+}
+
+textarea{
+resize:none;
+}
+
+.buttons{
+display:flex;
+gap:15px;
+margin-top:25px;
+}
+
+.save{
+background:#52D11F;
+color:white;
+border:none;
+padding:14px 25px;
+border-radius:8px;
+cursor:pointer;
+font-weight:bold;
+}
+
+.password{
+background:#062B6F;
+color:white;
+border:none;
+padding:14px 25px;
+border-radius:8px;
+cursor:pointer;
+font-weight:bold;
+}
+
+.back{
+background:#666;
+color:white;
+border:none;
+padding:14px 25px;
+border-radius:8px;
+cursor:pointer;
+font-weight:bold;
+}
+
+button:hover{
+opacity:.9;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="profile">
+
+<img src="assets/user.png" alt="Profile">
+
+<h2>Tahasin Fardin</h2>
+
+<p>ActiveX Customer</p>
+
+</div>
+
+<form>
+
+<div class="form-group">
+
+<label>Full Name</label>
+
+<input type="text" value="Tahasin Fardin">
+
+</div>
+
+<div class="form-group">
+
+<label>Email</label>
+
+<input type="email" value="example@gmail.com">
+
+</div>
+
+<div class="form-group">
+
+<label>Phone Number</label>
+
+<input type="text" value="01XXXXXXXXX">
+
+</div>
+
+<div class="form-group">
+
+<label>Address</label>
+
+<textarea rows="4">Bangladesh</textarea>
+
+</div>
+
+<div class="buttons">
+
+<button class="save" type="button" onclick="saveProfile()">
+
+Save Changes
+
+</button>
+
+<button class="password" type="button" onclick="changePassword()">
+
+Change Password
+
+</button>
+
+<button class="back" type="button" onclick="goBack()">
+
+Dashboard
+
+</button>
+
+</div>
+
+</form>
+
+</div>
+
+<script>
+
+function saveProfile(){
+
+alert("Profile Updated Successfully");
+
+}
+
+function changePassword(){
+
+window.location="forgot-password.html";
+
+}
+
+function goBack(){
+
+window.location="dashboard.html";
+
+}
+
+</script>
+
+</body>
+</html>
