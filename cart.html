@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Shopping Cart | ActiveX</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<style>
+
+body{
+font-family:Poppins,sans-serif;
+background:#f5f7fa;
+margin:0;
+}
+
+header{
+background:#062B6F;
+color:white;
+padding:20px;
+text-align:center;
+font-size:28px;
+font-weight:bold;
+}
+
+.container{
+max-width:1200px;
+margin:40px auto;
+display:grid;
+grid-template-columns:2fr 1fr;
+gap:30px;
+padding:20px;
+}
+
+.cart-items{
+background:white;
+padding:25px;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+
+.item{
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:20px 0;
+border-bottom:1px solid #eee;
+}
+
+.item img{
+width:100px;
+height:100px;
+object-fit:cover;
+border-radius:10px;
+}
+
+.info{
+flex:1;
+margin-left:20px;
+}
+
+.info h3{
+color:#062B6F;
+margin-bottom:8px;
+}
+
+.price{
+color:#52D11F;
+font-size:22px;
+font-weight:bold;
+}
+
+.qty{
+width:60px;
+padding:8px;
+}
+
+.remove{
+background:#ff3b3b;
+color:white;
+border:none;
+padding:10px 18px;
+border-radius:8px;
+cursor:pointer;
+}
+
+.summary{
+background:white;
+padding:25px;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,.1);
+height:fit-content;
+}
+
+.summary h2{
+color:#062B6F;
+margin-bottom:20px;
+}
+
+.summary p{
+display:flex;
+justify-content:space-between;
+margin:15px 0;
+}
+
+.summary input{
+width:100%;
+padding:12px;
+border:1px solid #ddd;
+border-radius:8px;
+margin-top:15px;
+}
+
+.checkout{
+width:100%;
+margin-top:20px;
+padding:15px;
+background:#52D11F;
+color:white;
+border:none;
+border-radius:8px;
+font-size:17px;
+font-weight:bold;
+cursor:pointer;
+}
+
+.checkout:hover{
+background:#45b718;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+🛒 ActiveX Shopping Cart
+
+</header>
+
+<div class="container">
+
+<div class="cart-items">
+
+<div class="item">
+
+<img src="assets/products/jersey.jpg">
+
+<div class="info">
+
+<h3>Football Jersey</h3>
+
+<p class="price">৳1499</p>
+
+Quantity
+
+<input class="qty" type="number" value="1" min="1">
+
+</div>
+
+<button class="remove">
+
+Remove
+
+</button>
+
+</div>
+
+<div class="item">
+
+<img src="assets/products/shoes.jpg">
+
+<div class="info">
+
+<h3>Running Shoes</h3>
+
+<p class="price">৳3499</p>
+
+Quantity
+
+<input class="qty" type="number" value="1" min="1">
+
+</div>
+
+<button class="remove">
+
+Remove
+
+</button>
+
+</div>
+
+</div>
+
+<div class="summary">
+
+<h2>Order Summary</h2>
+
+<p>
+
+<span>Subtotal</span>
+
+<span>৳4998</span>
+
+</p>
+
+<p>
+
+<span>Delivery</span>
+
+<span>৳100</span>
+
+</p>
+
+<p>
+
+<span>Discount</span>
+
+<span>৳0</span>
+
+</p>
+
+<hr>
+
+<p>
+
+<strong>Total</strong>
+
+<strong>৳5098</strong>
+
+</p>
+
+<input
+type="text"
+placeholder="Coupon Code">
+
+<button class="checkout"
+onclick="checkout()">
+
+Proceed To Checkout
+
+</button>
+
+</div>
+
+</div>
+
+<script>
+
+function checkout(){
+
+alert("Redirecting to Checkout");
+
+window.location="checkout.html";
+
+}
+
+document.querySelectorAll(".remove").forEach(btn=>{
+
+btn.onclick=function(){
+
+this.parentElement.remove();
+
+alert("Item Removed");
+
+}
+
+});
+
+</script>
+
+</body>
+
+</html>
