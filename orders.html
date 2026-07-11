@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>My Orders | ActiveX</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<style>
+
+body{
+margin:0;
+font-family:Poppins,sans-serif;
+background:#f5f7fa;
+}
+
+header{
+background:#062B6F;
+color:white;
+padding:20px;
+text-align:center;
+font-size:28px;
+font-weight:bold;
+}
+
+.container{
+max-width:1200px;
+margin:40px auto;
+padding:20px;
+}
+
+.order-card{
+
+background:white;
+padding:25px;
+border-radius:15px;
+margin-bottom:25px;
+box-shadow:0 5px 15px rgba(0,0,0,.1);
+
+}
+
+.order-header{
+
+display:flex;
+justify-content:space-between;
+flex-wrap:wrap;
+margin-bottom:20px;
+
+}
+
+.order-id{
+
+font-size:22px;
+font-weight:bold;
+color:#062B6F;
+
+}
+
+.status{
+
+padding:8px 18px;
+border-radius:20px;
+font-weight:bold;
+color:white;
+
+}
+
+.delivered{
+
+background:#52D11F;
+
+}
+
+.shipping{
+
+background:#ff9800;
+
+}
+
+.pending{
+
+background:#ff4444;
+
+}
+
+.product{
+
+display:flex;
+align-items:center;
+gap:20px;
+margin-top:20px;
+
+}
+
+.product img{
+
+width:120px;
+height:120px;
+border-radius:10px;
+object-fit:cover;
+
+}
+
+.info h3{
+
+margin:0;
+color:#062B6F;
+
+}
+
+.info p{
+
+margin:8px 0;
+
+}
+
+.buttons{
+
+margin-top:20px;
+display:flex;
+gap:15px;
+flex-wrap:wrap;
+
+}
+
+button{
+
+padding:12px 20px;
+border:none;
+border-radius:8px;
+cursor:pointer;
+font-weight:bold;
+
+}
+
+.invoice{
+
+background:#062B6F;
+color:white;
+
+}
+
+.track{
+
+background:#52D11F;
+color:white;
+
+}
+
+.review{
+
+background:#ff9800;
+color:white;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+My Orders
+
+</header>
+
+<div class="container">
+
+<div class="order-card">
+
+<div class="order-header">
+
+<div>
+
+<div class="order-id">
+
+Order #AX1001
+
+</div>
+
+<p>Date : 11 July 2026</p>
+
+<p>Payment : bKash</p>
+
+<p>Total : ৳1499</p>
+
+</div>
+
+<div class="status delivered">
+
+Delivered
+
+</div>
+
+</div>
+
+<div class="product">
+
+<img src="assets/products/jersey.jpg">
+
+<div class="info">
+
+<h3>ActiveX Football Jersey</h3>
+
+<p>Quantity : 1</p>
+
+<p>Payment Status : Paid</p>
+
+</div>
+
+</div>
+
+<div class="buttons">
+
+<button class="invoice">
+
+Download Invoice
+
+</button>
+
+<button class="track">
+
+Track Order
+
+</button>
+
+<button class="review">
+
+Write Review
+
+</button>
+
+</div>
+
+</div>
+
+<div class="order-card">
+
+<div class="order-header">
+
+<div>
+
+<div class="order-id">
+
+Order #AX1002
+
+</div>
+
+<p>Date : 09 July 2026</p>
+
+<p>Payment : Cash On Delivery</p>
+
+<p>Total : ৳3499</p>
+
+</div>
+
+<div class="status shipping">
+
+Shipping
+
+</div>
+
+</div>
+
+<div class="product">
+
+<img src="assets/products/shoes.jpg">
+
+<div class="info">
+
+<h3>Running Shoes</h3>
+
+<p>Quantity : 1</p>
+
+<p>Payment Status : Pending</p>
+
+</div>
+
+</div>
+
+<div class="buttons">
+
+<button class="invoice">
+
+Invoice
+
+</button>
+
+<button class="track">
+
+Track Order
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+document.querySelectorAll(".track").forEach(btn=>{
+
+btn.onclick=function(){
+
+alert("Tracking page will open.");
+
+}
+
+});
+
+document.querySelectorAll(".invoice").forEach(btn=>{
+
+btn.onclick=function(){
+
+alert("Invoice Download Started.");
+
+}
+
+});
+
+document.querySelectorAll(".review").forEach(btn=>{
+
+btn.onclick=function(){
+
+alert("Review Page Coming Soon.");
+
+}
+
+});
+
+</script>
+
+</body>
+</html>
