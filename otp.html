@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>OTP Verification | ActiveX</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<style>
+
+body{
+background:#f5f7fa;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+font-family:Poppins,sans-serif;
+}
+
+.container{
+width:420px;
+background:white;
+padding:40px;
+border-radius:15px;
+box-shadow:0 10px 25px rgba(0,0,0,.15);
+text-align:center;
+}
+
+.logo img{
+width:80px;
+margin-bottom:20px;
+}
+
+h2{
+color:#062B6F;
+margin-bottom:15px;
+}
+
+p{
+color:#555;
+margin-bottom:25px;
+}
+
+.otp-box{
+display:flex;
+justify-content:space-between;
+margin-bottom:25px;
+}
+
+.otp-box input{
+width:55px;
+height:60px;
+text-align:center;
+font-size:22px;
+border:2px solid #ddd;
+border-radius:10px;
+}
+
+.otp-box input:focus{
+border-color:#52D11F;
+outline:none;
+}
+
+button{
+width:100%;
+padding:15px;
+background:#062B6F;
+color:white;
+border:none;
+border-radius:8px;
+font-size:16px;
+font-weight:bold;
+cursor:pointer;
+}
+
+button:hover{
+background:#041f52;
+}
+
+.resend{
+margin-top:20px;
+}
+
+.resend a{
+color:#52D11F;
+text-decoration:none;
+font-weight:bold;
+}
+
+.timer{
+margin-top:10px;
+color:#888;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="logo">
+<img src="assets/logo.png" alt="ActiveX">
+</div>
+
+<h2>OTP Verification</h2>
+
+<p>Enter the 6-digit verification code sent to your Email or Phone.</p>
+
+<form id="otpForm">
+
+<div class="otp-box">
+
+<input maxlength="1" required>
+<input maxlength="1" required>
+<input maxlength="1" required>
+<input maxlength="1" required>
+<input maxlength="1" required>
+<input maxlength="1" required>
+
+</div>
+
+<button type="submit">
+
+Verify OTP
+
+</button>
+
+</form>
+
+<div class="resend">
+
+<a href="#">Resend OTP</a>
+
+<div class="timer">
+
+OTP expires in <span id="count">60</span> seconds
+
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+let time=60;
+
+const counter=document.getElementById("count");
+
+setInterval(()=>{
+
+if(time>0){
+
+time--;
+
+counter.innerHTML=time;
+
+}
+
+},1000);
+
+document.getElementById("otpForm").addEventListener("submit",function(e){
+
+e.preventDefault();
+
+alert("OTP Verified Successfully");
+
+window.location="dashboard.html";
+
+});
+
+</script>
+
+</body>
+
+</html>
