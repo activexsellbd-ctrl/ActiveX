@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Checkout | ActiveX</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<style>
+
+body{
+font-family:Poppins,sans-serif;
+background:#f4f6fa;
+margin:0;
+}
+
+header{
+background:#062B6F;
+color:white;
+padding:18px;
+text-align:center;
+font-size:28px;
+font-weight:bold;
+}
+
+.container{
+max-width:1200px;
+margin:40px auto;
+display:grid;
+grid-template-columns:2fr 1fr;
+gap:30px;
+padding:20px;
+}
+
+.form{
+background:white;
+padding:30px;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+
+.form h2{
+color:#062B6F;
+margin-bottom:20px;
+}
+
+.form input,
+.form textarea,
+.form select{
+
+width:100%;
+padding:14px;
+margin-bottom:18px;
+border:1px solid #ddd;
+border-radius:8px;
+font-size:15px;
+
+}
+
+.summary{
+
+background:white;
+padding:25px;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,.1);
+height:fit-content;
+
+}
+
+.summary h2{
+color:#062B6F;
+}
+
+.summary p{
+display:flex;
+justify-content:space-between;
+margin:15px 0;
+}
+
+.place{
+
+width:100%;
+padding:16px;
+background:#52D11F;
+border:none;
+color:white;
+font-size:18px;
+border-radius:8px;
+cursor:pointer;
+font-weight:bold;
+}
+
+.place:hover{
+
+background:#43b016;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+ActiveX Checkout
+
+</header>
+
+<div class="container">
+
+<div class="form">
+
+<h2>Shipping Information</h2>
+
+<input
+type="text"
+placeholder="Full Name"
+required>
+
+<input
+type="email"
+placeholder="Email">
+
+<input
+type="text"
+placeholder="Phone Number"
+required>
+
+<textarea
+rows="4"
+placeholder="Delivery Address"></textarea>
+
+<select>
+
+<option>Choose Payment Method</option>
+
+<option>bKash</option>
+
+<option>Nagad</option>
+
+<option>PayPal</option>
+
+<option>Cash On Delivery</option>
+
+</select>
+
+</div>
+
+<div class="summary">
+
+<h2>Order Summary</h2>
+
+<p>
+
+<span>Subtotal</span>
+
+<span>৳4998</span>
+
+</p>
+
+<p>
+
+<span>Delivery</span>
+
+<span>৳100</span>
+
+</p>
+
+<p>
+
+<span>Discount</span>
+
+<span>৳0</span>
+
+</p>
+
+<hr>
+
+<p>
+
+<strong>Total</strong>
+
+<strong>৳5098</strong>
+
+</p>
+
+<button
+class="place"
+onclick="placeOrder()">
+
+Place Order
+
+</button>
+
+</div>
+
+</div>
+
+<script>
+
+function placeOrder(){
+
+alert("Order Placed Successfully!");
+
+window.location="orders.html";
+
+}
+
+</script>
+
+</body>
+
+</html>
