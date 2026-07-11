@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Wishlist | ActiveX</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<style>
+
+body{
+margin:0;
+font-family:Poppins,sans-serif;
+background:#f5f7fa;
+}
+
+header{
+background:#062B6F;
+color:white;
+padding:20px;
+text-align:center;
+font-size:28px;
+font-weight:bold;
+}
+
+.container{
+max-width:1200px;
+margin:40px auto;
+padding:20px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:25px;
+}
+
+.card{
+background:white;
+border-radius:15px;
+padding:20px;
+text-align:center;
+box-shadow:0 5px 15px rgba(0,0,0,.12);
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+}
+
+.card img{
+width:180px;
+height:180px;
+object-fit:cover;
+border-radius:10px;
+}
+
+.card h3{
+color:#062B6F;
+margin:15px 0;
+}
+
+.price{
+font-size:22px;
+font-weight:bold;
+color:#52D11F;
+}
+
+.rating{
+color:orange;
+margin:10px 0;
+}
+
+.buttons{
+display:flex;
+flex-direction:column;
+gap:10px;
+margin-top:15px;
+}
+
+button{
+padding:12px;
+border:none;
+border-radius:8px;
+font-weight:bold;
+cursor:pointer;
+}
+
+.cart{
+background:#52D11F;
+color:white;
+}
+
+.view{
+background:#062B6F;
+color:white;
+}
+
+.remove{
+background:#ff4444;
+color:white;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+❤️ My Wishlist
+
+</header>
+
+<div class="container">
+
+<div class="grid">
+
+<div class="card">
+
+<img src="assets/products/jersey.jpg">
+
+<h3>ActiveX Football Jersey</h3>
+
+<div class="price">৳1499</div>
+
+<div class="rating">★★★★★</div>
+
+<div class="buttons">
+
+<button class="cart" onclick="addCart()">
+
+Move To Cart
+
+</button>
+
+<button class="view"
+onclick="location.href='product.html'">
+
+View Product
+
+</button>
+
+<button class="remove" onclick="removeItem(this)">
+
+Remove
+
+</button>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="assets/products/shoes.jpg">
+
+<h3>Running Shoes</h3>
+
+<div class="price">৳3499</div>
+
+<div class="rating">★★★★☆</div>
+
+<div class="buttons">
+
+<button class="cart" onclick="addCart()">
+
+Move To Cart
+
+</button>
+
+<button class="view"
+onclick="location.href='product.html'">
+
+View Product
+
+</button>
+
+<button class="remove"
+onclick="removeItem(this)">
+
+Remove
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+function addCart(){
+
+alert("Product moved to Cart.");
+
+}
+
+function removeItem(btn){
+
+btn.closest(".card").remove();
+
+alert("Removed from Wishlist.");
+
+}
+
+</script>
+
+</body>
+</html>
